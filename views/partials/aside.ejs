@@ -3,10 +3,11 @@
         <div class="card-header bg-dark text-light">Blog Posts</div>
 
         <nav class="nav flex-column">
-                <a class="nav-link" href="iQuit.html">I Quit!</a>
-                <a class="nav-link" href="addSound.html">Let's Make Some Noise!</a>
-                <a class="nav-link" href="formatLinks.html">Basic Formatting of Links</a>
-                <a class="nav-link" href="rescue1.html">Practice Site Idea</a>
+            <% for(var i=0; i < blogPosts.length; i++) { %>
+                <a class="nav-link" href="/post/<%= blogPosts[i].linkName %>"><%= blogPosts[i].title %></a>
+  <% } %>
+                
+                <a class="nav-link" href="/addPost">Add Blog Post</a>
         </nav>
     </div>
     <div class="card w-100">

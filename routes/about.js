@@ -4,7 +4,7 @@ let repo = require('../models/blogRepo');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { /*title: 'Express' */   blogPosts: repo.posts() });
+  res.render('about', { /*title: 'Express' */   blogPosts: repo.posts() });
 });
 
 module.exports = router;
