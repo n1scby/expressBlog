@@ -5,19 +5,19 @@
     <form action="/updatePost" method="POST">
         <div>
             <label for="title">Blog Title: </label>
-            <input type="text" id="title" name="title">
+            <input type="text" id="title" name="title" value="<%= title %>">
         </div>
         <div>
             <label for="author">Author: </label>
-            <input type="text" id="author" name="author">
+            <input type="text" id="author" name="author" value="<%= author %>" >
         </div>
         <div>
             <label for="linkName">Name of Blog Link:</label>
-            <input type="text" id="linkName" name="linkName">
+            <input type="text" id="linkName" name="linkName" value="<%= linkName %>">
         </div>
         <div>
             <label for="blog">Blog Post: </label>
-            <textarea id="blog" name="blog" rows="20"></textarea>
+            <textarea id="blog" name="blog" rows="20"><%= blogContent %></textarea>
         </div>
         <div>
             <label for="passPhrase">Pass Phrase: </label>

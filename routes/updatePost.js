@@ -2,9 +2,11 @@ var express = require('express');
 var router = express.Router();
 let repo = require('../models/blogRepo');
 
-/* GET Add Post page for rendering. */
-router.get('/', function(req, res, next) {
-  res.render('editPost', { });
+/* GET Update Post page for rendering. */
+router.get('/:linkName', function(req, res, next) {
+    var post = req.params.linkName;
+    var blog = repo.getPostByLink(post);
+  res.render('updatePost', {author: blog.author, title: blog.title , blogContent: blog.postContent, linkName: blog.linkName});
 });
 
 /* POST - Write data from form (edit Post) to file */
