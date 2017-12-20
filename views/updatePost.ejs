@@ -13,7 +13,7 @@
         </div>
         <div>
             <label for="linkName">Name of Blog Link:</label>
-            <input type="text" id="linkName" name="linkName" value="<%= linkName %>">
+            <input type="text" id="linkName" name="linkName" value="<%= linkName %>" readonly="readonly">
         </div>
         <div>
             <label for="blog">Blog Post: </label>
@@ -24,7 +24,8 @@
             <input type="password" id="passPhrase" name="passPhrase">
         </div>
         <div>
-            <button type="submit">Update Blog Entry</button>
+            <button type="submit" value="update" name="actionButton">Update Blog Entry</button>
+            <button type="submit" value="delete" name="actionButton">Delete Blog Entry</button>
         </div>
     </form>
 </main>

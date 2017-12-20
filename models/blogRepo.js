@@ -40,11 +40,27 @@ let repository = {
             return blog.linkName === linkName;
         });
     },
+    updatePost: (changePost) => {
+        blogList.forEach(function(item, index, array){
+            if (item.linkName == changePost.linkName) {
+                array[index].title = changePost.title;
+                array[index].author = changePost.author;
+                array[index].postContent = changePost.postContent;
+            };
+        });
+    },
     addPost: (newBlog) => {
         blogList.push(newBlog);
         savePosts();
 
 
+    },
+    deletePost: (linkName) => {
+        blogList.forEach(function(item, index, array){
+            if (item.linkName == linkName){
+                array.splice(index, 1);
+            }
+        });
     }
 }
 

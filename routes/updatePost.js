@@ -13,13 +13,17 @@ router.get('/:linkName', function(req, res, next) {
 
 router.post('/',(req, res, next) =>{
     if(req.body.passPhrase == "secretCode"){
-    let newPost = {};
-    newPost.title = req.body.title;
-    newPost.author = req.body.author;
-    newPost.postContent = req.body.blog;
-    newPost.linkName = req.body.linkName;
+    if(req.body.actionButton == "update"){
+    let changePost = {};
+    changePost.title = req.body.title;
+    changePost.author = req.body.author;
+    changePost.postContent = req.body.blog;
+    changePost.linkName = req.body.linkName;
 
-    repo.addPost(newPost);
+    repo.updatePost(changePost);
+    } else {
+        repo.deletePost(req.body.linkName);
+    }
     };
 
     res.redirect("/");   /* send back to home page */
