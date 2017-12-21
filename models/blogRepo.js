@@ -46,6 +46,7 @@ let repository = {
                 array[index].title = changePost.title;
                 array[index].author = changePost.author;
                 array[index].postContent = changePost.postContent;
+                savePosts();
             };
         });
     },
@@ -59,6 +60,7 @@ let repository = {
         blogList.forEach(function(item, index, array){
             if (item.linkName == linkName){
                 array.splice(index, 1);
+                savePosts();
             }
         });
     }
