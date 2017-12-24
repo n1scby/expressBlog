@@ -46,6 +46,8 @@ let repository = {
                 array[index].title = changePost.title;
                 array[index].author = changePost.author;
                 array[index].postContent = changePost.postContent;
+                array[index].imageName = changePost.imageName;
+                array[index].altDesc = changePost.altDesc;
                 savePosts();
             };
         });

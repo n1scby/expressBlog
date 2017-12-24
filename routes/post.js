@@ -7,7 +7,7 @@ router.get('/:linkName', function(req, res, next) {
   var post = req.params.linkName;
   var blog = repo.getPostByLink(post);
   res.render('post', { title: 'Test Blog Site',
-  postTitle: blog.title, postContent: blog.postContent,   blogPosts: repo.posts(), linkName: post
+  postTitle: blog.title, postContent: blog.postContent,   blogPosts: repo.posts(), linkName: post, altDesc: blog.altDesc, imageName: blog.imageName
 });
 });
 

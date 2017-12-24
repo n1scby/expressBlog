@@ -1,34 +1,42 @@
 <% include partials/header %>
-<main>
-    <h1>Edit Blog Post</h1>
-    <p>Modify the blog post.</p>
-    <form action="/updatePost" method="POST">
-        <div>
-            <label for="title">Blog Title: </label>
-            <input type="text" id="title" name="title" value="<%= title %>">
-        </div>
-        <div>
-            <label for="author">Author: </label>
-            <input type="text" id="author" name="author" value="<%= author %>" >
-        </div>
-        <div>
-            <label for="linkName">Name of Blog Link:</label>
-            <input type="text" id="linkName" name="linkName" value="<%= linkName %>" readonly="readonly">
-        </div>
-        <div>
-            <label for="blog">Blog Post: </label>
-            <textarea id="blog" name="blog" rows="20"><%= blogContent %></textarea>
-        </div>
-        <div>
-            <label for="passPhrase">Pass Phrase: </label>
-            <input type="password" id="passPhrase" name="passPhrase">
-        </div>
-        <div>
-            <button type="submit" value="update" name="actionButton">Update Blog Entry</button>
-            <button type="submit" value="delete" name="actionButton">Delete Blog Entry</button>
-        </div>
-    </form>
-</main>
-<script src="/javascripts/tinymce/tinymce.min.js"></script>
-<script>tinymce.init({ selector:'textarea' });</script>
-<% include partials/footer %>
+    <main>
+        <h1>Edit Blog Post</h1>
+        <p>Modify the blog post.</p>
+        <form action="/updatePost" method="POST">
+            <div>
+                <label for="title">Blog Title: </label>
+                <input type="text" id="title" name="title" value="<%= title %>">
+            </div>
+            <div>
+                <label for="author">Author: </label>
+                <input type="text" id="author" name="author" value="<%= author %>">
+            </div>
+            <div>
+                <label for="linkName">Name of Blog Link:</label>
+                <input type="text" id="linkName" name="linkName" value="<%= linkName %>" readonly="readonly">
+            </div>
+            <div>
+                <label for="imageName">Image: </label>
+                <input type="text" id="imageName" name="imageName" value="<%= imageName %>">
+            </div>
+            <div>
+                <label for="altDesc">Alt Description: </label>
+                <input type="text" id="altDesc" name="altDesc" value="<%= altDesc %>">
+            </div>
+            <div>
+                <label for="blog">Blog Post: </label>
+                <textarea id="blog" name="blog" rows="20"><%= blogContent %></textarea>
+            </div>
+            <div>
+                <label for="passPhrase">Pass Phrase: </label>
+                <input type="password" id="passPhrase" name="passPhrase">
+            </div>
+            <div>
+                <button type="submit" value="update" name="actionButton">Update Blog Entry</button>
+                <button type="submit" value="delete" name="actionButton">Delete Blog Entry</button>
+            </div>
+        </form>
+    </main>
+    <script src="/javascripts/tinymce/tinymce.min.js"></script>
+    <script>tinymce.init({ selector: 'textarea' });</script>
+    <% include partials/footer %>

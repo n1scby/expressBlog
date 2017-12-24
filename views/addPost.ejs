@@ -1,33 +1,41 @@
 <% include partials/header %>
-<main>
-    <h1>Add Blog Post</h1>
-    <p>Fill out the form to add a post.</p>
-    <form action="/addPost" method="POST">
-        <div>
-            <label for="title">Blog Title: </label>
-            <input type="text" id="title" name="title">
-        </div>
-        <div>
-            <label for="author">Author: </label>
-            <input type="text" id="author" name="author">
-        </div>
-        <div>
-            <label for="linkName">Name of Blog Link:</label>
-            <input type="text" id="linkName" name="linkName">
-        </div>
-        <div>
-            <label for="blog">Blog Post: </label>
-            <textarea id="blog" name="blog" rows="20"></textarea>
-        </div>
-        <div>
-            <label for="passPhrase">Pass Phrase: </label>
-            <input type="password" id="passPhrase" name="passPhrase">
-        </div>
-        <div>
-            <button type="submit">Add Blog Entry</button>
-        </div>
-    </form>
-</main>
-<script src="/javascripts/tinymce/tinymce.min.js"></script>
-<script>tinymce.init({ selector:'textarea' });</script>
-<% include partials/footer %>
+    <main>
+        <h1>Add Blog Post</h1>
+        <p>Fill out the form to add a post.</p>
+        <form action="/addPost" method="POST">
+            <div>
+                <label for="title">Blog Title: </label>
+                <input type="text" id="title" name="title">
+            </div>
+            <div>
+                <label for="author">Author: </label>
+                <input type="text" id="author" name="author">
+            </div>
+            <div>
+                <label for="linkName">Name of Blog Link:</label>
+                <input type="text" id="linkName" name="linkName">
+            </div>
+            <div>
+                <label for="imageName">Image: </label>
+                <input type="text" id="imageName" name="imageName">
+            </div>
+            <div>
+                <label for="altDesc">Alt Description: </label>
+                <input type="text" id="altDesc" name="altName">
+            </div>
+            <div>
+                <label for="blog">Blog Post: </label>
+                <textarea id="blog" name="blog" rows="20"></textarea>
+            </div>
+            <div>
+                <label for="passPhrase">Pass Phrase: </label>
+                <input type="password" id="passPhrase" name="passPhrase">
+            </div>
+            <div>
+                <button type="submit">Add Blog Entry</button>
+            </div>
+        </form>
+    </main>
+    <script src="/javascripts/tinymce/tinymce.min.js"></script>
+    <script>tinymce.init({ selector: 'textarea' });</script>
+    <% include partials/footer %>
