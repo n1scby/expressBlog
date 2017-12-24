@@ -1,0 +1,17 @@
+[
+    {
+        "title": "I Quit!",
+        "author": "me",
+        "postContent": "<p>If anyone has ever wondered, \"Should I quit my job?\",then I understand.  I wanted to quit for many years but I just wasn't ready.  There are many reasons people stay on. Mine were: </p> <ul> <li>15 minute commute!</li> <li>5 weeks of vacation!</li> <li>Paycheck!</li> <li>Sense of security</li><li>The people - how could I leave the folks that depended on me?</li> <li>It was comfortable.  I knew pretty much what to expect.</li> </ul> <p>   Unfortunately, I didn't like my job though.  I was doing something I had done for many years and I wanted to expand my horizons.  Learn something new.  Something challenging.  Something exciting. So, that lead me to my decision. I needed to quit.  </p> <p>But how could I do it?  I didn't have enough skills in something else to get a job.  Heck, even my company only wanted me for one job. They had no desire to train me in something else, even if I was an awesome employee and there were open positions in the company that I could have filled (they wanted somebody with experience).  What to do? I started looking for classes to take, but couldn't really find anything.  Nothing seemed to fit what I wanted.  Then one day I received an email from some guy named Jeff who ran a local user group.  He was reminding me of the next meetup, and at the very bottom of the email was a note saying new classes were starting for a coding bootcamp.  What?  Really?!? I think this is what I want to do! </p> <p>But, at the time things seemed to be improving a little at work.  We were getting more organized and I was assigned as the lead on a pretty important project.  Maybe I should just hang on and give it a chance.  Maybe things will work out. I worked my tail off on that project - even worked weekends and successfully implemented it.  I must say I did an excellent job.  No complaints from the users.  Then the next project came, and I was back to where I was before.  I didn't want to be doing what I was doing.  I needed out. </p> <p>So, I did it.  I quit.  It was terrifying.  Saying to my boss that I was leaving was one of the harder things I have had to do.  I was worried that everyone would be angry with me.  But they weren't.  They were so supportive and excited about me going to school (and I think maybe a little envious).  What a relief! </p><p>Now I am in class writing a blog post for an assignment.  I am on the path to finally doing what I want to do.  Yay!</p></p>",
+        "linkName": "IQuit",
+        "imageName": "/images/resign.jpg",
+        "altDesc": "resignation"
+    },
+    {
+        "title": "Let's Make Some Noise",
+        "author": "me",
+        "postContent": "<p>You may find that you want to add some sound to a website.  Why?  Various reasons. In my case, I needed it for a game.  </p> <p>First, add an id to the button in the html. <br> <img src=\"images/htmlButton.png\" alt=\"Add ID to Button\"</p><p>Next create some javascript: <br><img src=\"images/jsButton.png\" alt=\"javascript code\"></p><p>And that's all you need to do.  Click the button and listen to the sound. Bark! Bark!</p><button id=\"bark-bark\" class=\"btn btn-dark btn-lg\">Bark!</button>",
+        "linkName": "makeNoise",
+        "imageName": "/images/rowdy3.jpg"
+    }
+]
