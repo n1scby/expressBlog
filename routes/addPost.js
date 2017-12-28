@@ -18,6 +18,7 @@ router.post('/',(req, res, next) =>{
     newPost.linkName = req.body.linkName;
     newPost.altDesc = req.body.altDesc;
     newPost.imageName = req.body.imageName;
+    newPost.picDesc = req.body.picDesc;
 
     repo.addPost(newPost);
     };

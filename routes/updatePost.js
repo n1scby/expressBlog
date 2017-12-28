@@ -6,7 +6,7 @@ let repo = require('../models/blogRepo');
 router.get('/:linkName', function(req, res, next) {
     var post = req.params.linkName;
     var blog = repo.getPostByLink(post);
-  res.render('updatePost', {author: blog.author, title: blog.title , blogContent: blog.postContent, linkName: blog.linkName, imageName: blog.imageName, altDesc: blog.altDesc});
+  res.render('updatePost', {author: blog.author, title: blog.title , blogContent: blog.postContent, linkName: blog.linkName, imageName: blog.imageName, altDesc: blog.altDesc, picDesc: blog.picDesc});
 });
 
 /* POST - Write data from form (edit Post) to file */
@@ -21,6 +21,7 @@ router.post('/',(req, res, next) =>{
     changePost.linkName = req.body.linkName;
     changePost.altDesc = req.body.altDesc;
     changePost.imageName = req.body.imageName;
+    changPost.picDesc = req.body.picDesc;
 
     repo.updatePost(changePost);
     } else {
