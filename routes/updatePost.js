@@ -6,7 +6,7 @@ let repo = require('../models/blogRepo');
 router.get('/:linkName', function(req, res, next) {
     var post = req.params.linkName;
     var blog = repo.getPostByLink(post);
-  res.render('editPost', {author: blog.author, title: blog.title, blogContent: blog.postContent, linkName: blog.linkName, imageName: blog.imageName, altDesc: blog.altDesc, picDesc: blog.picDesc, pageTitle: "Update Blog Post", addUpdate: "update the ", readOnly: "readonly", addButtonClass: "d-none", updateButtonClass: "d-block", formAction: "/updatePost" });
+  res.render('editPost', {author: blog.author, title: blog.title, blogContent: blog.postContent, linkName: blog.linkName, imageName: blog.imageName, altDesc: blog.altDesc, picDesc: blog.picDesc, pageTitle: "Update Blog Post", addUpdate: "update the ", readOnly: "readonly", addButtonClass: "d-none", updateButtonClass: "d-inline", formAction: "/updatePost" });
 });
 
 /* POST - Write data from form (edit Post) to file */
