@@ -1,44 +1,56 @@
 <% include partials/header %>
     <main>
-        <h1>Add Blog Post</h1>
-        <p>Fill out the form to add a post.</p>
-        <form action="/addPost" method="POST">
-            <div>
-                <label for="title">Blog Title: </label>
-                <input type="text" id="title" name="title">
+
+        <section class="row">
+            <div class="col-1"></div>
+            <div class="col-11">
+                <h1>Add Blog Post</h1>
+                <p>Fill out the form to add a post.</p>
             </div>
-            <div>
-                <label for="author">Author: </label>
-                <input type="text" id="author" name="author">
-            </div>
-            <div>
-                <label for="linkName">Name of Blog Link:</label>
-                <input type="text" id="linkName" name="linkName">
-            </div>
-            <div>
-                <label for="imageName">Image: </label>
-                <input type="text" id="imageName" name="imageName">
-            </div>
-            <div>
-                <label for="altDesc">Alt Description: </label>
-                <input type="text" id="altDesc" name="altDesc">
-            </div>
-            <div>
-                <label for"picDesc">Picture Description: </label>
-                <input type="text" id="picDesc" name="picDesc">
-            </div>
-            <div>
-                <label for="blog">Blog Post: </label>
-                <textarea id="blog" name="blog" rows="20"></textarea>
-            </div>
-            <div>
-                <label for="passPhrase">Pass Phrase: </label>
-                <input type="password" id="passPhrase" name="passPhrase">
-            </div>
-            <div>
-                <button type="submit">Add Blog Entry</button>
-            </div>
+            </section>
+            <section class="row">
+                <div class="col-1"></div>
+            <form action="/addPost" method="POST" id="input-form" class="col-9">
+
+                <div class="form-group">
+                    <label for="title">Blog Title: </label>
+                    <input type="text" id="title" name="title" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="author">Author: </label>
+                    <input type="text" id="author" name="author" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="linkName">Name of Blog Link:</label>
+                    <input type="text" id="linkName" name="linkName" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="imageName">Image: </label>
+                    <input type="text" id="imageName" name="imageName" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="altDesc">Alt Description: </label>
+                    <input type="text" id="altDesc" name="altDesc" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for "picDesc">Picture Description: </label>
+                    <input type="text" id="picDesc" name="picDesc" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="blog">Blog Post: </label>
+                    <textarea id="blog" name="blog" rows="15" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="passPhrase">Pass Phrase: </label>
+                    <input type="password" id="passPhrase" name="passPhrase" class="form-control">
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary">Add Blog Entry</button>
+                </div>
+        </section>
         </form>
+
+
     </main>
     <script src="/javascripts/tinymce/tinymce.min.js"></script>
     <script>tinymce.init({ selector: 'textarea' });</script>
