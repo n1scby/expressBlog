@@ -1,0 +1,63 @@
+<% include partials/header %>
+    <main>
+
+        <section class="row">
+            <div class="col-1"></div>
+            <div class="col-11">
+                <h1>
+                    <%= pageTitle %>
+                </h1>
+                <p>Fill out the form to
+                    <%=addUpdate %>post.</p>
+            </div>
+        </section>
+        <section class="row">
+            <div class="col-1"></div>
+            <form action="<%= formAction %>" method="POST"  class="col-9">
+
+                <div class="form-group">
+                    <label for="title">Blog Title: </label>
+                    <input type="text" id="title" name="title" class="form-control" value="<%= title %>">
+                </div>
+                <div class="form-group">
+                    <label for="author">Author: </label>
+                    <input type="text" id="author" name="author" class="form-control" value="<%= author %>">
+                </div>
+                <div class="form-group">
+                    <label for="linkName">Name of Blog Link:</label>
+                    <input type="text" id="linkName" name="linkName" class="form-control" value="<%= linkName %>" <%= readOnly %>>
+                </div>
+                <div class="form-group">
+                    <label for="imageName">Image: </label>
+                    <input type="text" id="imageName" name="imageName" class="form-control" value="<%= imageName %>">
+                </div>
+                <div class="form-group">
+                    <label for="altDesc">Alt Description: </label>
+                    <input type="text" id="altDesc" name="altDesc" class="form-control" value="<%= altDesc %>">
+                </div>
+                <div class="form-group">
+                    <label for "picDesc">Picture Description: </label>
+                    <input type="text" id="picDesc" name="picDesc" class="form-control" value="<%= picDesc %>">
+                </div>
+                <div class="form-group">
+                    <label for="blog">Blog Post: </label>
+                    <textarea id="blog" name="blog" rows="15" class="form-control"><%= blogContent %></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="passPhrase">Pass Phrase: </label>
+                    <input type="password" id="passPhrase" name="passPhrase" class="form-control">
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary <%= addButtonClass %>" value="add" name="actionButton">Add Blog Entry</button>
+                    <button type="submit" class="btn btn-primary <%= updateButtonClass %>" value="update" name="actionButton">Update Blog Entry</button>
+                    <button type="submit" class="btn btn-primary <%= updateButtonClass %>" value="delete" name="actionButton">Delete Blog Entry</button>
+
+                </div>
+        </section>
+        </form>
+
+
+    </main>
+    <script src="/javascripts/tinymce/tinymce.min.js"></script>
+    <script>tinymce.init({ selector: 'textarea' });</script>
+    <% include partials/footer %>
