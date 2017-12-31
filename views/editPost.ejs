@@ -53,8 +53,15 @@
                     <button type="submit" class="btn btn-primary <%= updateButtonClass %>" value="delete" name="actionButton">Delete Blog Entry</button>
 
                 </div>
-        </section>
         </form>
+        </section>
+        <section class="row">
+                <div class="col-1"></div>
+                <div id="errorMessage" class="col-8">                  
+                    <%- errorMessage %>
+                </div>
+
+        </section>
 
 
     </main>

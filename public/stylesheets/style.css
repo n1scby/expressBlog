@@ -5,3 +5,8 @@ main article p, main article li{font-size: 1.25rem;}
 
 #bark-bark{padding: 1rem;}
 
+#errorMessage{
+    font-size: 1.25rem;
+    color: rgb(236, 33, 33);
+    margin-top: 1rem;
+}
